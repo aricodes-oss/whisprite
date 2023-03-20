@@ -4,8 +4,4 @@ RSpec.describe Whisprite do
   it "has a version number" do
     expect(Whisprite::VERSION).not_to be nil
   end
-
-  it "does something useful" do
-    expect(false).to eq(true)
-  end
 end
