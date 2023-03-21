@@ -6,7 +6,7 @@ require "active_record"
 
 # Load and initialize ActiveRecord
 project_root = File.dirname(File.absolute_path(__FILE__))
-Dir.glob("#{project_root}/app/models/*.rb").sort.each { |f| require f }
+Dir.glob("#{project_root}/models/*.rb").sort.each { |f| require f }
 
 connection_details = YAML.safe_load(File.open("config/database.yml"))
 ActiveRecord::Base.establish_connection(connection_details)

@@ -14,6 +14,9 @@ task default: %i[spec rubocop]
 require "litestack"
 require "active_record"
 require "yaml"
+require "require_all"
+
+require_all "#{File.dirname(__FILE__)}/db/migrate"
 
 namespace :db do
   db_config = YAML.safe_load(File.open("config/database.yml"))
@@ -28,7 +31,7 @@ namespace :db do
   desc "Migrate the database"
   task :migrate do
     ActiveRecord::Base.establish_connection(db_config)
-    ActiveRecord::Migration.migrate("db/migrate/")
+    ActiveRecord::MigrationContext.new("db/migrate/").migrate
     Rake::Task["db:schema"].invoke
     puts "Database migrated."
   end
@@ -64,9 +67,7 @@ namespace :g do
 
     File.write(path, <<~EOF)
       class #{migration_class} < ActiveRecord::Migration
-        def self.up
-        end
-        def self.down
+        def change
         end
       end
     EOF
