@@ -5,9 +5,13 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in whisprite.gemspec
 # gemspec
 
-gem "twitch-api"
-
 gem "dotenv"
+gem "litestack"
+gem "require_all"
+gem "twitch-bot"
+gem "twitchrb"
+
+gem "activerecord"
 
 group :development do
   gem "rake", "~> 13.0"

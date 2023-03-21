@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "irb"
 require_relative "../lib/whisprite"
 
-puts Whisprite::VERSION
+api = Whisprite::Twitch.api
+
+binding.irb
