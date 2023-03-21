@@ -1,0 +1,14 @@
+ - [ ] Database
+   - [ ] Collections model (quotes, horror movie rules, band names, nicknames, etc)
+   - [ ] Commands model
+     - [ ] Static text rendering
+     - [ ] String formatting
+     - [ ] Scripting capabilities for moderators maybe?
+   - [ ] Sandwich/dumpling model
+   - [ ] Counter model (birds, notbirds, vore, so on)
+   - [ ] Aliases model + relationship
+   - [ ] MAYBE a User model?
+ - [ ] Core
+   - [ ] Actually functional shoutout command with parsing
+   - [ ] Pronouns command
+   - [ ] Maybe golive messages or some mod capabilities?
