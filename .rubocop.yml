@@ -29,6 +29,12 @@ Style/ClassAndModuleChildren:
 Style/Alias:
   Enabled: false
 
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
 # Only temporarily while hacking
 Style/Documentation:
+  Enabled: false
+
+Lint/Debugger:
   Enabled: false
