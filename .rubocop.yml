@@ -32,6 +32,9 @@ Style/Alias:
 Naming/HeredocDelimiterNaming:
   Enabled: false
 
+Metrics/MethodLength:
+  Enabled: false
+
 # Only temporarily while hacking
 Style/Documentation:
   Enabled: false

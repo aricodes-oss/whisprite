@@ -4,6 +4,6 @@
 require "irb"
 require_relative "../lib/whisprite"
 
-api = Whisprite::Twitch.api
+include Whisprite
 
 binding.irb
