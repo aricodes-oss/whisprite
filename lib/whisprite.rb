@@ -27,7 +27,7 @@ module Whisprite
         channel: ENV.fetch("TWITCH_CHANNEL", nil),
         config: configuration
       ) do
-        # register_handler(Whisprite::JoinHandler)
+        register_handler(Whisprite::JoinHandler)
         # register_handler(Whisprite::SubscriptionHandler)
         # register_handler(Whisprite::PlanCommandHandler)
         # register_handler(Whisprite::StreamerCommandHandler)
@@ -48,9 +48,16 @@ module Whisprite
 
     def adapter_class
       if development_mode?
-        "Twitch::Bot::Adapter::Terminal"
+        # "Twitch::Bot::Adapter::Terminal"
+      end
+      "Twitch::Bot::Adapter::Irc"
+    end
+
+    def memory_class
+      if development_mode?
+        "Twitch::Bot::Memory::Hash"
       else
-        "Twitch::Bot::Adapter::Irc"
+        "Twitch::Bot::Memory::Redis"
       end
     end
 

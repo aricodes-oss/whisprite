@@ -7,6 +7,6 @@ RUN gem install bundler
 
 COPY . .
 
-RUN bundle install
+RUN bundle install --without development
 
 CMD ["bundle", "exec", "bin/whisprite"]

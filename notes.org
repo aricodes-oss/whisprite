@@ -12,3 +12,17 @@
    - [ ] Actually functional shoutout command with parsing
    - [ ] Pronouns command
    - [ ] Maybe golive messages or some mod capabilities?
+
+Supported event types:
+#+begin_src ruby
+:authenticated
+:join
+:message
+:slow_mode
+:r9k_mode
+:followers_mode
+:subscribers_mode
+:subscribe
+:stop
+:not_supported
+#+end_src

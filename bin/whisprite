@@ -4,6 +4,8 @@
 require "irb"
 require_relative "../lib/whisprite"
 
-include Whisprite
+# binding.irb
 
-binding.irb
+bot = Whisprite::Bot.new
+
+bot.run
